@@ -11,10 +11,10 @@ const Dashboard = ({ navigateTo }) => {
   const [joinedFilter, setJoinedFilter] = useState('anytime');
   const [pageNumber, setPageNumber] = useState(0);
   const [selectedUsers, setSelectedUsers] = useState([]);
-  const [editingUser, setEditingUser] = useState(null); // Track the user being edited
+  const [editingUser, setEditingUser] = useState(null);
   const rowsPerPage = 6;
 
-  const userRole = useSelector(state => state.auth.role);
+  const userRole = useSelector((state) => state.auth.role);
   const dispatch = useDispatch();
 
   useEffect(() => {
@@ -24,16 +24,23 @@ const Dashboard = ({ navigateTo }) => {
       .catch((error) => console.error('Error fetching data:', error));
   }, []);
 
-  const filteredData = data.filter(item => {
-    return (
-      (item.fullName.toLowerCase().includes(searchTerm.toLowerCase()) ||
-      item.email.toLowerCase().includes(searchTerm.toLowerCase())) &&
-      (permissionsFilter === 'all' || item.permissions.toLowerCase() === permissionsFilter.toLowerCase()) &&
-      (joinedFilter === 'anytime' ||
-        (joinedFilter === 'latest' && new Date(item.joined) > new Date()) ||
-        (joinedFilter === 'earliest' && new Date(item.joined) < new Date())
-    ))
-  });
+  const filteredData = data
+    .filter((item) => {
+      return (
+        (item.fullName.toLowerCase().includes(searchTerm.toLowerCase()) ||
+          item.email.toLowerCase().includes(searchTerm.toLowerCase())) &&
+        (permissionsFilter === 'all' || item.permissions.toLowerCase() === permissionsFilter.toLowerCase())
+      );
+    })
+    .sort((a, b) => {
+      if (joinedFilter === 'latest') {
+        return new Date(b.joined) - new Date(a.joined); // Sort by latest joined
+      } else if (joinedFilter === 'earliest') {
+        return new Date(a.joined) - new Date(b.joined); // Sort by earliest joined
+      } else {
+        return 0; // No sorting if "anytime" is selected
+      }
+    });
 
   const pageCount = Math.ceil(filteredData.length / rowsPerPage);
 
@@ -49,7 +56,6 @@ const Dashboard = ({ navigateTo }) => {
   const handlePageChange = (newPage) => setPageNumber(newPage);
 
   const currentPageData = filteredData.slice(pageNumber * rowsPerPage, (pageNumber + 1) * rowsPerPage);
-
   const toggleUserSelection = (userId) => {
     setSelectedUsers((prevSelected) => {
       if (prevSelected.includes(userId)) {
@@ -102,16 +108,7 @@ const Dashboard = ({ navigateTo }) => {
     setEditingUser(null); // Close the edit form
   };
 
-  // Logout function
-  const handleLogout = () => {
-    dispatch({ type: 'LOGOUT' }); // Dispatch logout action
-    navigateTo('login'); // Navigate to the login page
-  };
 
-  // Navigate to the document dashboard
-  const handleDocumentsClick = () => {
-    navigateTo('documents'); // Navigate to the document dashboard
-  };
 
   return (
     <div className="container">
