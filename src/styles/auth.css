@@ -1,0 +1,762 @@
+body {
+ font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+}
+
+.auth-container {
+ display: flex;
+ justify-content: center;
+ align-items: center;
+ height: 100vh;
+ background: linear-gradient(135deg, #e0e7ff, #f3f4f6);
+}
+
+.auth-box {
+ background: white;
+ padding: 20px;
+ border-radius: 8px;
+ box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+ width: 100%;
+ max-width: 400px;
+ text-align: center;
+}
+
+.auth-logo {
+ margin-bottom: 20px;
+}
+
+h2 {
+ margin-bottom: 10px;
+ color: #333;
+}
+
+.subheading {
+ color: #888;
+ margin-bottom: 20px;
+}
+
+.social-signup button {
+ width: 100%;
+ padding: 12px;
+ margin: 5px 0;
+ border: none;
+ border-radius: 5px;
+ font-size: 16px;
+ cursor: pointer;
+}
+
+.google-btn {
+ background-color: #db4437;
+ color: white;
+}
+
+.facebook-btn {
+ background-color: #4267b2;
+ color: white;
+}
+
+.or-container {
+ margin: 20px 0;
+ position: relative;
+}
+
+.or-container span {
+ background-color: white;
+ padding: 0 10px;
+ position: absolute;
+ top: -10px;
+ left: 50%;
+ transform: translateX(-50%);
+ font-size: 14px;
+}
+
+.auth-form input {
+ width: calc(100% - 20px); /* Adjust width considering padding */
+ max-width: 100%; /* Prevents overflow */
+ padding: 12px;
+ margin: 10px 0;
+ border-radius: 5px;
+ border: 1px solid #ddd;
+ box-sizing: border-box; /* Ensures padding and border don't increase width */
+}
+
+
+.submit-btn {
+ width: 100%;
+ padding: 12px;
+ background-color: #000;
+ color: white;
+ border: none;
+ border-radius: 5px;
+ font-size: 16px;
+ cursor: pointer;
+}
+
+.switch-auth {
+ margin-top: 20px;
+ color: #000;
+}
+
+.switch-link {
+ color: #6c63ff;
+ cursor: pointer;
+}
+
+.switch-link:hover {
+ text-decoration: underline;
+}
+
+.error {
+ color: red;
+ font-size: 14px;
+}
+
+footer {
+ margin-top: 20px;
+ font-size: 12px;
+ color: #888;
+}
+
+.container {
+ max-width: 1200px;
+ margin: 0 auto;
+ padding: 20px;
+}
+
+h2 {
+ margin-bottom: 20px;
+}
+
+.search-container {
+ margin-bottom: 20px;
+}
+
+.search-input {
+ width: 100%;
+ padding: 10px;
+ font-size: 16px;
+ border: 1px solid #ddd;
+ border-radius: 5px;
+}
+
+.user-table {
+ width: 100%;
+ border-collapse: collapse;
+ margin-top: 20px;
+}
+
+.user-table th, .user-table td {
+ padding: 12px 15px;
+ border: 1px solid #ddd;
+}
+
+.user-table th {
+ background-color: #f5f5f5;
+}
+
+.user-table tr:nth-child(even) {
+ background-color: #f9f9f9;
+}
+
+.pagination {
+ display: flex;
+ justify-content: center;
+ margin-top: 20px;
+}
+
+.pagination button {
+ padding: 10px;
+ background-color: #9C6FFF;
+ color: white;
+ border: none;
+ border-radius: 5px;
+ cursor: pointer;
+ margin: 0 5px;
+}
+
+.pagination button:disabled {
+ background-color: #ddd;
+ cursor: not-allowed;
+}
+
+.actions-container {
+ display: flex;
+ justify-content: space-between;
+ margin-top: 20px;
+}
+.delete-s-btn{
+ padding: 5px 10px;
+ background-color: white;
+ color: red;
+ border: none;
+ border-radius: 5px;
+ cursor: pointer;
+ margin-bottom: 5px;
+}
+
+.export-btn, .new-user-btn {
+ padding: 10px 20px;
+ background-color: #9C6FFF;
+ color: white;
+ border: none;
+ border-radius: 5px;
+ cursor: pointer;
+}
+
+h2{
+ font-size: 30px;
+}
+.export-btn:hover, .new-user-btn:hover {
+ background-color: #9C6FFF;
+}
+
+.header-container {
+ display: flex;
+ justify-content: space-between;
+ align-items: center;
+ margin-bottom: 20px;
+ margin-top: 50px;
+}
+
+.search-container, .dropdown-container {
+ margin-right: 10px;
+}
+
+.search-input {
+ width: 200px;
+ padding: 8px;
+}
+
+.dropdown {
+ padding: 8px;
+ font-size: 14px;
+}
+
+.new-user-btn {
+ padding: 10px 20px;
+ background-color: #9C6FFF;
+ color: white;
+ border: none;
+ border-radius: 5px;
+ cursor: pointer;
+}
+
+.new-user-btn:hover {
+ background-color: #9C6FFF;
+}
+
+.pagination {
+ display: flex;
+ justify-content: center;
+ margin-top: 20px;
+}
+
+.pagination button {
+ padding: 10px;
+ background-color: #9C6FFF;
+ color: white;
+ border: none;
+ border-radius: 5px;
+ cursor: pointer;
+ margin: 0 5px;
+}
+
+.pagination button:disabled {
+ background-color: #ddd;
+ cursor: not-allowed;
+}
+
+.pagination-container {
+ display: flex;
+ align-items: center;
+ justify-content: center;
+ gap: 10px;
+ margin-top: 20px;
+}
+
+.pagination-arrow {
+ background-color: #000; /* Black for the arrows */
+ color: white;
+ border: 1px solid #ddd;
+ padding: 10px 15px;
+ cursor: pointer;
+ border-radius: 50%;
+ font-size: 16px;
+ transition: background-color 0.3s;
+}
+
+.pagination-arrow:disabled {
+ background-color: #ddd;
+ cursor: not-allowed;
+}
+
+.pagination-button {
+ background-color: #fff;
+ border: 1px solid #ddd;
+ padding: 10px 15px;
+ cursor: pointer;
+ border-radius: 50%; /* Round buttons */
+ font-size: 16px;
+ color: #333;
+ transition: background-color 0.3s;
+}
+
+.pagination-button:hover {
+ background-color: #f0f0f0;
+}
+
+.pagination-button.active {
+ background-color: #9C6FFF; /* Current page in purple */
+ color: white;
+}
+
+.pagination-button:disabled {
+ background-color: #ddd;
+ cursor: not-allowed;
+}
+
+.ellipsis {
+ font-size: 16px;
+ color: #333;
+}
+
+/* Style the dropdown container */
+.dropdown-container {
+ display: inline-flex;
+ align-items: center;
+ background-color: #4a4a4a1e; /* Gray background */
+ padding: 5px 10px;
+ border-radius: 5px;
+}
+/* Style the dropdown container */
+.dropdown-container1 {
+ display: inline-block;
+ align-items: center;
+ background-color: #ffffff; /* Gray background */
+ padding: 5px 10px;
+ border-radius: 5px;
+}
+
+/* Style the dropdown text */
+.dropdown-container span {
+ color: #000000;  /* White text for the label */
+ font-size: 16px;
+ margin-right: 10px;
+ margin-left: 5px;
+}
+
+.dropdown-label{
+ margin-right: 10px;
+}
+/* Style the select dropdown */
+.dropdown {
+ background-color:white;
+ border: none;
+ color: #6c5ce7;  /* Purple text */
+ font-size: 16px;
+ font-weight: 600;
+ padding: 5px 10px;
+ width: auto;
+ outline: none;
+ cursor: pointer;
+ border-radius: 25px;
+ margin-left: 5px;
+}
+
+/* Style the dropdown arrow */
+.dropdown::after {
+ content: " ▼ ";
+ font-size: 12px;
+ color: #6c5ce7;
+}
+
+/*Focused state styling*/
+.dropdown:focus {
+ color: #453a9a;
+}
+
+.delete-btn {
+ background-color: red;
+ color: white;
+ border: none;
+ padding: 6px 12px;
+ border-radius: 4px;
+ cursor: pointer;
+ font-weight: bold;
+}
+
+.delete-btn:hover {
+ background-color: darkred;
+}
+
+.status-cell {
+ font-weight: bold;
+ padding: 6px 12px;
+ border-radius: 6px;
+ text-align: center;
+ display: inline-block;
+ min-width: 100px;
+ color: white;
+}
+
+/* Status Badge */
+.status-badge {
+ font-weight: bold;
+ padding: 4px 10px;
+ border-radius: 4px;
+ text-align: center;
+ display: inline-block;
+ min-width: 80px;
+}
+
+/* Colors for different statuses */
+.active {
+ background-color: rgba(0, 128, 0, 0.2); /* Light Green */
+ color: green;
+ border: 1px solid green;
+}
+
+.inactive {
+ background-color: rgba(128, 128, 128, 0.2); /* Light Gray */
+ color: gray;
+ border: 1px solid gray;
+}
+
+
+
+/* Buttons for actions */
+.deactivate-btn {
+ background-color: gray;
+ color: white;
+ border: none;
+ padding: 6px 12px;
+ border-radius: 4px;
+ cursor: pointer;
+ font-weight: bold;
+ margin-right: 5px;
+}
+
+.suspend-btn {
+ background-color: red;
+ color: white;
+ border: none;
+ padding: 6px 12px;
+ border-radius: 4px;
+ cursor: pointer;
+ font-weight: bold;
+ margin-right: 5px;
+}
+
+.activate-btn {
+ background-color: green;
+ color: white;
+ border: none;
+ padding: 6px 12px;
+ border-radius: 4px;
+ cursor: pointer;
+ font-weight: bold;
+ margin-right: 5px;
+}
+
+/* Style the dropdown */
+.auth-form select {
+ width: 50%;
+ padding: 10px;
+ margin-bottom: 15px;  /* Adds space between dropdown & button */
+ border: 2px solid #6c5ce748; /* Gold border for elegance */
+ border-radius: 8px;
+ background-color: #fff;
+ color: #333;
+ font-size: 16px;
+ appearance: none; /* Hides default dropdown arrow */
+ cursor: pointer;
+}
+
+.select-wrapper {
+ position: relative;
+ display: inline-block;
+ width: 200px; /* Adjust width */
+}
+
+select {
+ appearance: none;
+ width: 100%;
+ padding: 10px 35px 10px 10px; /* Ensure space for arrow */
+ font-size: 16px;
+ border: 2px solid #ccc;
+ border-radius: 8px;
+ background-color: white;
+ cursor: pointer;
+}
+
+.table-container {
+ width: 100%;
+ overflow-x: auto;
+}
+
+.table {
+ width: 100%;
+ border-collapse: collapse;
+}
+
+th,
+td {
+ padding: 10px;
+ text-align: left;
+ white-space: nowrap;
+ overflow: hidden;
+ text-overflow: ellipsis;
+ max-width: 150px; /* Adjust as needed */
+}
+
+td.email {
+ max-width: 200px; /* Set a fixed width for email */
+}
+
+td:hover {
+ overflow: visible;
+ white-space: normal;
+ position: relative;
+ z-index: 10;
+ background: white; /* Ensures visibility */
+ word-break: break-word;
+}
+
+.document-table {
+ width: 100%;
+ border-collapse: collapse;
+}
+
+.document-table th, .document-table td {
+ border: 1px solid #ddd;
+ padding: 8px;
+ text-align: left;
+}
+
+.document-table th {
+ background-color: #f2f2f2;
+ font-weight: bold;
+}
+
+/* Add to your styles.css */
+.logout-btn {
+ background-color: white;
+ color: red;
+ border: 1px red solid;
+ border-radius: 5px;
+ padding: 10px 20px;
+ cursor: pointer;
+ margin-right: 10px;
+ font-weight: bold;
+}
+
+.documents-btn {
+ background-color: #4CAF50;
+ color: white;
+ border: none;
+ padding: 10px 20px;
+ cursor: pointer;
+}
+
+.logout-btn:hover {
+ color: #f90000;
+}
+
+.documents-btn:hover {
+ background-color: #45a049;
+}
+
+/* Modal Styles */
+.modal-overlay {
+ position: fixed;
+ top: 0;
+ left: 0;
+ width: 100%;
+ height: 100%;
+ background-color: rgba(0, 0, 0, 0.5);
+ display: flex;
+ justify-content: center;
+ align-items: center;
+}
+
+.modal {
+ background-color: white;
+ padding: 20px;
+ border-radius: 8px;
+ width: 300px;
+ box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.modal h3 {
+ margin-top: 0;
+}
+
+.modal form label {
+ display: block;
+ margin-bottom: 5px;
+}
+
+.modal form input,
+.modal form select {
+ width: 100%;
+ padding: 8px;
+ margin-bottom: 10px;
+ border: 1px solid #ccc;
+ border-radius: 4px;
+}
+
+.modal form button {
+ margin-right: 10px;
+}
+
+/* Edit Button */
+.edit-btn {
+ background-color: white;
+ color: #45a049;
+ font-weight: bold;
+ border:1px #45a049 solid;
+ padding: 5px 10px;
+ cursor: pointer;
+ border-radius: 5px;
+ margin-right: 5px;
+
+}
+.cancel-btn{
+ background-color: white;
+ color: gray;
+ font-weight: bold;
+ border:1px gray solid;
+ padding: 5px 10px;
+ cursor: pointer;
+ border-radius: 5px;
+}
+.save-btn{
+ background-color: white;
+ color: #45a049;
+ font-weight: bold;
+ border:1px #45a049 solid;
+ padding: 5px 10px;
+ cursor: pointer;
+ border-radius: 5px;
+}
+
+/* Upload Form Styles */
+.upload-form {
+ max-width: 500px;
+ margin: 0 auto;
+ padding: 20px;
+ border: 1px solid #ccc;
+ border-radius: 8px;
+ background-color: #f9f9f9;
+}
+
+.form-group {
+ margin-bottom: 15px;
+}
+
+.form-group label {
+ display: block;
+ margin-bottom: 5px;
+ font-weight: bold;
+}
+
+.form-group input,
+.form-group textarea,
+.form-group select {
+ width: 100%;
+ padding: 8px;
+ border: 1px solid #ccc;
+ border-radius: 4px;
+}
+
+.submit-btn {
+ background-color: #6c5ce7;
+ color: white;
+ border: none;
+ padding: 10px 20px;
+ cursor: pointer;
+ border-radius: 4px;
+}
+
+.submit-btn:hover {
+ background-color: #5e50cc;
+}
+
+.back-btn {
+ background-color: white;
+ color: #6c5ce7;
+ font-weight: bold;
+ border: 1px #6c5ce7 solid;
+ padding: 10px 20px;
+ cursor: pointer;
+ border-radius: 4px;
+ margin-top: 10px;
+ width: 100%;
+}
+
+.back-btn:hover{
+ color: #5e50cc;
+}
+
+.error {
+ color: red;
+ margin-bottom: 10px;
+}
+
+.success {
+ color: green;
+ margin-bottom: 10px;
+}
+
+
+
+
+/* Navbar Styles */
+.navbar {
+ display: flex;
+ justify-content: space-between;
+ align-items: center;
+ padding: 10px 20px;
+ border:1px rgba(128, 128, 128, 0.365) solid;
+ margin-bottom: 50px;
+}
+
+.navbar-left {
+ display: flex;
+ align-items: center;
+ gap: 20px;
+}
+
+.profile-icon,
+.notifications-icon {
+ display: flex;
+ align-items: center;
+ gap: 0px;
+ cursor: pointer;
+ color: #000;
+}
+
+.notification-count {
+ background-color: red;
+ color: rgb(255, 255, 255);
+ border-radius: 50%;
+ padding: 1px 3px;
+ font-size: 10px;
+}
+
+.navbar-right {
+ display: flex;
+ gap: 10px;
+}
+
+.nav-btn {
+ background-color: #4CAF50;
+ color: white;
+ border: none;
+ padding: 10px 20px;
+ cursor: pointer;
+ border-radius: 5px;
+}
+
+.nav-btn:hover {
+ background-color: #45a049;
+}
